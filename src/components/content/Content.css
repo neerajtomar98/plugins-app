@@ -1,0 +1,21 @@
+.content {
+  box-sizing: border-box;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 5vh 20px 5vh;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 250px 250px;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,7 @@
+.plugins-app-container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  row-gap: 10px;
+}

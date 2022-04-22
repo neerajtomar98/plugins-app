@@ -1,0 +1,33 @@
+.navigation-panel {
+  box-sizing: border-box;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  background-color: #f0f0f0;
+}
+.header {
+  padding-top: 20px;
+  padding-left: 32px;
+  height: 45px;
+}
+.tabs-container {
+  height: calc(100vh-80px);
+}
+
+.footer {
+  width: 20vw;
+  position: fixed;
+  padding: 10px 10px 0px 0px;
+  bottom: 0;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.power-switch {
+  margin-left: 10px;
+  cursor: pointer;
+}
