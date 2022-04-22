@@ -5,7 +5,7 @@ import Content from "./components/content/Content";
 import { withRouter } from "react-router";
 import "./App.css";
 
-const baseUrl = "https://plugins-app.netlify.app/";
+const baseUrl = window.location.origin;
 
 const App = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +21,7 @@ const App = (props) => {
   }, []);
 
   const fetchTabsData = () => {
-    const dataUrl = baseUrl + "tabdata";
+    const dataUrl = baseUrl + "/tabdata";
     fetch(dataUrl)
       .then((res) => res.json())
       .then((tabsData) => {
@@ -30,7 +30,7 @@ const App = (props) => {
   };
 
   const fetchPlugins = () => {
-    const dataUrl = baseUrl + "plugins";
+    const dataUrl = baseUrl + "/plugins";
     fetch(dataUrl)
       .then((res) => res.json())
       .then((plugins) => {
@@ -40,7 +40,7 @@ const App = (props) => {
   };
 
   const updateSelectedTab = (tabId) => {
-    const dataUrl = baseUrl + "selectedTab";
+    const dataUrl = baseUrl + "/selectedTab";
     const params = {
       method: "PUT",
       headers: {
@@ -58,7 +58,7 @@ const App = (props) => {
   };
 
   const updatePowerSwitch = () => {
-    const dataUrl = baseUrl + "powerSwitch";
+    const dataUrl = baseUrl + "/powerSwitch";
     const payload = { isActive: isPowerSwitchActive ? true : false };
     const params = {
       method: "POST",
@@ -96,7 +96,7 @@ const App = (props) => {
     return payload;
   };
   const updateSelectedPluginStatus = (plugInId) => {
-    const dataUrl = baseUrl + "tabdata";
+    const dataUrl = baseUrl + "/tabdata";
     const payload = preparePayload(plugInId);
     const params = {
       method: "PUT",
