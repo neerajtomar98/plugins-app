@@ -14,7 +14,9 @@ const NavigationPanel = (props) => {
   } = props;
   return (
     <div className="navigation-panel">
-      <h3 className="header">Random Name</h3>
+      <div className="header">
+        Data<b>Guard</b>
+      </div>
       <div className="tabs-container">
         {Object.keys(tabsData).map((tabKey) => (
           <Tab
